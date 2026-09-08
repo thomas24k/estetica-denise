@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Instagram, ChevronRight, Menu, X, Star } from 'lucide-react';
+import { MapPin, Phone, ChevronRight, Menu, X, Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
 // Components
 const Navbar = () => {
@@ -363,7 +362,11 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center">
-                <Instagram className="w-5 h-5 mr-3 text-brand-orange shrink-0" />
+                <svg className="w-5 h-5 mr-3 text-brand-orange shrink-0 fill-none stroke-current stroke-2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
                 <a href="https://www.instagram.com/esteticadenise__/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">@esteticadenise__</a>
               </li>
             </ul>
