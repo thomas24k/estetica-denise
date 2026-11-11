@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estetica Denise, centro estetico a Cittadella | Unghie, ciglia, laser</title>
+<meta name="description" content="Estetica Denise a Cittadella (PD), Borgo Treviso 49/B. Semipermanente da 25 €, laminazione ciglia 40 €, epilazione laser 39 € a zona. Prenoti su WhatsApp.">
+<meta name="theme-color" content="#15110e">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Gloock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<link rel="preload" as="image" href="assets/n9.webp">
+<style>
+:root{--display:"Gloock",Georgia,serif}
+h1,h2,h3,.d{font-family:var(--display);font-weight:400;letter-spacing:-.02em;line-height:1}
+h2{font-size:clamp(36px,7.4vw,76px)}
+h3{font-size:clamp(34px,5.4vw,60px)}
+.stripes{background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M-10 10L10-10M0 40L40 0M30 50L50 30' stroke='%23cbb054' stroke-width='14'/%3E%3C/svg%3E")}
+.dots{background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='11' cy='11' r='4' fill='%2315110e'/%3E%3C/svg%3E")}
+.dots-ink{background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='11' cy='11' r='3.5' fill='%23cbb054'/%3E%3C/svg%3E")}
+.waves{background:var(--paper-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cpath d='M0 12q12-16 24 0t24 0' fill='none' stroke='%2315110e' stroke-width='5'/%3E%3C/svg%3E")}
+
+/* bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper)}
+.bar .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.bar img{height:58px;width:auto}
+.bar nav{margin-left:auto;display:none;gap:28px}
+.bar nav a{text-decoration:none;font-weight:500}
+.bar nav a:hover{color:var(--gold)}
+.bar .btn{margin-left:auto;min-height:44px;padding:0 20px;font-size:16px}
+@media (min-width:900px){.bar nav{display:flex}.bar .btn{margin-left:0}}
+
+/* hero */
+.hero-pic{position:relative;height:min(62vh,520px);overflow:hidden}
+.hero-pic img{position:absolute;left:50%;bottom:-6%;width:min(78%,430px);aspect-ratio:1;object-fit:cover;border-radius:50%;transform:translateX(-50%);animation:drift 9s var(--ease) alternate infinite;transform-origin:50% 60%}
+.hero-pic img{animation:none}
+.hero-txt{text-align:center;padding:36px var(--m) 56px}
+h1{font-size:clamp(35px,9.2vw,104px)}
+.hero-txt p{max-width:34ch;margin:20px auto 26px;font-size:18px}
+.open{display:block;margin-top:16px;font-weight:500;font-size:16px}
+.open[data-open=yes]{color:var(--gold-deep)}
+@media (min-width:900px){
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px);max-height:860px}
+  .hero-pic{height:auto}.hero-pic img{bottom:auto;top:50%;transform:translate(-50%,-50%);width:min(74%,560px)}
+  .hero-txt{text-align:left;align-self:center;padding:40px var(--m) 40px 64px}
+  .hero-txt p{margin-inline:0;font-size:20px}
+  h1{font-size:clamp(44px,4.7vw,68px)}
+}
+
+/* marquee */
+.band{background:var(--ink);color:var(--gold);overflow:hidden;white-space:nowrap;padding:14px 0;font:400 22px/1 var(--display)}
+.band div{display:inline-block;animation:slide 26s linear infinite}
+.band span{margin:0 18px}
+
+/* treatments, one after the other */
+.intro{padding:88px 0 8px;text-align:center}
+.intro p{max-width:40ch;margin:18px auto 0;font-size:18px}
+.t{display:grid;gap:26px;padding:56px 0;align-items:center}
+.t-pic{position:relative;width:min(82vw,400px);aspect-ratio:1;margin-inline:auto}
+.t-pic .shape{position:absolute;inset:0;border-radius:50%}
+.t-pic .shape.burst{border-radius:0;clip-path:var(--burst-a);background:var(--gold)}
+.t-pic .shape.burst-ink{border-radius:0;clip-path:var(--burst-c);background:var(--ink)}
+.t-pic .shape.burst-sun{border-radius:0;clip-path:var(--burst-b);background:var(--sunset)}
+.t-pic img{position:absolute;inset:11%;width:78%;height:78%;object-fit:cover;border-radius:50%;transition:transform .5s var(--ease)}
+.t:hover .t-pic img{transform:scale(1.04) rotate(-2deg)}
+.t-pic .shape{transition:transform .9s var(--ease)}
+.t:hover .t-pic .shape{transform:rotate(14deg)}
+.t-txt{max-width:460px;margin-inline:auto;width:100%}
+.t-txt p{margin:14px 0 10px}
+.t-txt .rows{margin-bottom:18px}
+.t-txt a.more{font-weight:700;text-underline-offset:5px;text-decoration-thickness:2px}
+.t-txt a.more:hover{color:var(--gold-deep)}
+.on-ink .t-txt a.more:hover{color:var(--gold)}
+@media (min-width:900px){
+  .t{grid-template-columns:1fr 1fr;gap:64px;padding:72px 0}
+  .t:nth-of-type(even) .t-pic{order:2}
+}
+.adv{margin-top:72px;padding-bottom:40px}
+.adv .intro{padding-top:104px}
+.adv .rows small{opacity:.8}
+
+/* offers */
+.offers{padding:104px 0}
+.offers h2{text-align:center;margin-bottom:44px}
+.offer-grid{display:grid;gap:20px}
+.offer{background:var(--white);border-radius:28px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center}
+.offer h3{font-size:30px}
+.offer p{grid-column:1}
+.offer .flag{grid-column:2;grid-row:1/span 2;width:118px;aspect-ratio:1;clip-path:var(--burst-a);background:var(--sunset);display:grid;place-content:center;text-align:center;font:400 30px/1 var(--display);animation:turn 40s linear infinite}
+.offer .flag b{animation:turn 40s linear infinite reverse;display:block;font-weight:400}
+.offer .flag small{display:block;font:500 13px/1.2 var(--text)}
+@media (min-width:900px){.offer-grid{grid-template-columns:1fr 1fr}}
+
+/* products */
+.shop{padding:96px 0 104px;overflow:hidden}
+.shop-head{display:grid;gap:14px;margin-bottom:36px}
+.shop-head p{max-width:46ch}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px var(--m) 24px;margin-inline:calc(var(--m)*-1);scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.p{flex:0 0 62%;scroll-snap-align:center;text-align:center;text-decoration:none}
+.p-pic{position:relative;aspect-ratio:1;margin-bottom:16px}
+.p-pic i{position:absolute;inset:6%;clip-path:var(--burst-a);background:var(--gold);transition:transform .8s var(--ease)}
+.p:nth-child(3n+2) .p-pic i{clip-path:none;border-radius:50%}
+.p:nth-child(3n+2) .p-pic i{background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='11' cy='11' r='4' fill='%2315110e'/%3E%3C/svg%3E")}
+.p:nth-child(3n) .p-pic i{clip-path:var(--burst-b);background:var(--paper)}
+.p-pic img{position:absolute;left:50%;top:50%;height:86%;width:auto;transform:translate(-50%,-50%) rotate(-6deg);border-radius:14px;transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.p:hover .p-pic img,.p:focus-visible .p-pic img{transform:translate(-50%,-54%) rotate(4deg) scale(1.06)}
+.p:hover .p-pic i{transform:rotate(40deg)}
+.p b{display:block;font:400 22px/1.1 var(--display)}
+.p span{display:block;margin-top:4px;font-size:15px;opacity:.8}
+.p .price{display:inline-block;margin-top:10px;color:var(--gold);font-size:18px}
+@media (min-width:700px){.p{flex-basis:30%}}
+@media (min-width:1100px){.p{flex-basis:21%}}
+
+/* reviews */
+.rev{padding:104px 0}
+.rev h2{margin-bottom:40px}
+.rev-grid{display:grid;gap:36px}
+.rev blockquote p{font:400 clamp(22px,2.4vw,30px)/1.25 var(--display);letter-spacing:-.01em}
+.rev cite{display:block;margin-top:14px;font-style:normal;font-weight:500;font-size:15px}
+@media (min-width:900px){.rev-grid{grid-template-columns:repeat(3,1fr);gap:48px}}
+
+/* Denise */
+.me{display:grid}
+.me-pic{position:relative;min-height:440px}
+.me-pic img,.me-pic video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.me-txt{padding:64px var(--m)}
+.me-txt p{margin-top:18px;max-width:44ch;font-size:18px}
+@media (min-width:900px){.me{grid-template-columns:1fr 1fr 1fr}.me-txt{padding:88px 56px;align-self:center}.me-pic{min-height:620px}}
+
+/* close */
+.close{padding:96px var(--m);text-align:center}
+.close .star{width:min(92vw,540px);aspect-ratio:1;margin:0 auto;clip-path:var(--burst-a);background:var(--ink);color:var(--paper);display:grid;place-content:center;justify-items:center;gap:14px;padding:16%}
+.close h2{font-size:clamp(34px,7vw,60px);color:var(--gold)}
+.close p{font-size:16px;max-width:24ch}
+.where{display:grid;gap:28px;margin-top:64px;text-align:left}
+.where h3{font-size:26px;margin-bottom:8px}
+.where a{font-weight:700;text-underline-offset:4px}
+@media (min-width:800px){.where{grid-template-columns:repeat(3,1fr);max-width:1000px;margin-inline:auto}}
+footer{background:var(--ink);color:var(--paper);padding:56px 0 40px;text-align:center}
+footer img{width:min(86%,560px);margin:0 auto 20px}
+footer p{font-size:15px;opacity:.85}
+</style>
+</head>
+<body class="on-paper">
+<a class="skip" href="#trattamenti">Vai ai trattamenti</a>
+<header class="bar"><div class="wrap">
+  <a href="#top" aria-label="Estetica Denise, inizio pagina"><img src="assets/logo-full.png" alt="Estetica Denise" width="1420" height="950"></a>
+  <nav aria-label="Sezioni"><a href="#trattamenti">Trattamenti</a><a href="#avanzata">Avanzata</a><a href="#offerte">Offerte</a><a href="#prodotti">Prodotti</a><a href="#dove">Dove sono</a></nav>
+  <a class="btn" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare">Prenota</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-pic stripes"><img src="assets/n9.webp" alt="Mano con semipermanente rosso lucido, lavoro di Denise" width="800" height="1067" fetchpriority="high"></div>
+  <div class="hero-txt">
+    <h1>Mani, ciglia, pelle.<br>Ci pensa Denise.</h1>
+    <p>Centro estetico a Cittadella, in Borgo Treviso. Semipermanente da 25&nbsp;€, e prenoti con un messaggio.</p>
+    <a class="btn" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>Prenota su WhatsApp</a>
+    <span class="open" data-open>Lun 14–19:30 · Mar–Ven 9–19 · Sab 9–13</span>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div>
+  <span>5,0 su Google</span><span>•</span><span>Borgo Treviso 49/B</span><span>•</span><span>Semipermanente da 25 €</span><span>•</span><span>Nail art 30 €</span><span>•</span><span>Laminazione ciglia 40 €</span><span>•</span>
+  <span>5,0 su Google</span><span>•</span><span>Borgo Treviso 49/B</span><span>•</span><span>Semipermanente da 25 €</span><span>•</span><span>Nail art 30 €</span><span>•</span><span>Laminazione ciglia 40 €</span><span>•</span>
+</div></div>
+
+<section id="trattamenti" class="wrap">
+  <div class="intro"><h2 class="rise">Estetica di base</h2><p class="rise" style="--i:1">Tutto quello che fai ogni mese, fatto bene e con i prezzi in chiaro.</p></div>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape stripes"></div><img src="assets/n2-sq.webp" alt="Nail art con ciliegie su base bianca e fucsia" width="560" height="560" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Unghie</h3><p class="rise" style="--i:1">Tinta unita, french, ciliegie, cuori. Porta la foto che hai salvato e la rifacciamo.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Manicure base con smalto</span><span class="price">15 €</span></li><li><span>Semipermanente monocolore</span><span class="price">25 €</span></li><li><span>Semipermanente nail art</span><span class="price">30 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20le%20unghie">Prenota le unghie</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape burst"></div><img src="assets/d2-sq.webp" alt="Unghie a mandorla rosa perlato" width="560" height="560" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Pedicure</h3><p class="rise" style="--i:1">Estetico o curativo, con smalto o semipermanente.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Base con smalto</span><span class="price">15 €</span></li><li><span>Solo semipermanente</span><span class="price">20 €</span></li><li><span>Curativo con smalto</span><span class="price">29 €</span></li><li><span>Curativo + semipermanente</span><span class="price">40 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20un%20pedicure">Prenota il pedicure</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape dots"></div><img src="assets/b1.webp" alt="Sguardo dopo la laminazione ciglia" width="800" height="600" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Laminazione</h3><p class="rise" style="--i:1">Ciglia incurvate e scure senza mascara, per settimane.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Laminazione ciglia, seduta singola</span><span class="price">40 €</span></li><li><span>Solo colorazione ciglia</span><span class="price">15 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20la%20laminazione%20ciglia">Prenota la laminazione</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape burst-ink"></div><img src="assets/b4.webp" alt="Sopracciglia sistemate e colorate" width="800" height="497" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Sopracciglia</h3><p class="rise" style="--i:1">Forma e colore che stanno bene al tuo viso, non a quello di un'altra.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Sistemazione e colorazione</span><span class="price">15 €</span></li><li><span>Solo cera sopracciglia</span><span class="price">5 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20le%20sopracciglia">Prenota le sopracciglia</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape waves"></div><img src="assets/l2.webp" alt="Cabina di Estetica Denise con luce rosa" width="800" height="1067" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Epilazione</h3><p class="rise" style="--i:1">Cera, zona per zona. Paghi solo quello che fai.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Ascelle</span><span class="price">5 €</span></li><li><span>Inguine</span><span class="price">10 €</span></li><li><span>Mezza gamba</span><span class="price">12 €</span></li><li><span>Braccia</span><span class="price">15 €</span></li><li><span>Gamba intera</span><span class="price">22 €</span></li><li><span>Completa</span><span class="price">50 €</span></li><li><span>Viso: labbro 3 €, sopracciglia 5 €, completo</span><span class="price">6 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20una%20ceretta">Prenota la cera</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape burst-sun"></div><img src="assets/b2.webp" alt="Trucco cerimonia realizzato da Denise" width="800" height="1067" loading="lazy" style="object-position:50% 38%"></div>
+    <div class="t-txt"><h3 class="rise">Trucco</h3><p class="rise" style="--i:1">Per una serata, una laurea, il tuo matrimonio.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Solo occhi</span><span class="price">15–20 €</span></li><li><span>Trucco giorno</span><span class="price">25 €</span></li><li><span>Sera o cerimonia</span><span class="price">35–40 €</span></li><li><span>Sposa, prova inclusa</span><span class="price">120–150 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20un%20trucco">Prenota il trucco</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape dots-ink"></div><img src="assets/l1.webp" alt="La cabina con le candele accese" width="800" height="1067" loading="lazy" style="object-position:50% 80%"></div>
+    <div class="t-txt"><h3 class="rise">Viso e corpo</h3><p class="rise" style="--i:1">Un'ora in cui non devi fare niente. Candele accese, telefono in borsa.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Pulizia viso, a partire da</span><span class="price">22 €</span></li><li><span>Trattamento viso specifico</span><span class="price">45 €</span></li><li><span>Massaggio rilassante, 60 minuti</span><span class="price">50 €</span></li><li><span>Massaggio drenante o anticellulite, 35 minuti</span><span class="price">35 €</span></li><li><span>Scrub corpo con sali del Mar Morto</span><span class="price">35 €</span></li><li><span>Bendaggi drenanti o anticellulite</span><span class="price">30 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20un%20trattamento">Prenota un trattamento</a></div>
+  </article>
+</section>
+
+<section id="avanzata" class="adv on-ink"><div class="wrap">
+  <div class="intro"><h2 class="rise gold">Estetica avanzata</h2><p class="rise" style="--i:1">I macchinari in cabina, per i risultati che con le mani non si ottengono.</p></div>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape burst"></div><img src="assets/l3.webp" alt="La cabina con luce blu, dove si fanno i trattamenti con i macchinari" width="800" height="1067" loading="lazy" style="object-position:50% 75%"></div>
+    <div class="t-txt"><h3 class="rise">Epilazione laser</h3><p class="rise" style="--i:1">Meno peli a ogni seduta, finché smetti di pensarci.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Una zona</span><span class="price">39 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20informazioni%20sul%20laser">Chiedi una prova</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape dots"></div><img src="assets/cabina-poster.webp" alt="Una candela accesa in cabina prima del trattamento" width="393" height="700" loading="lazy"></div>
+    <div class="t-txt"><h3 class="rise">Radiofrequenza e vacuum</h3><p class="rise" style="--i:1">La novità in cabina: rassoda, drena e tonifica, e lavora sugli inestetismi della cellulite.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Pacchetti di lancio<small>Il prezzo te lo dice Denise in base alla zona</small></span><span class="price">su richiesta</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20informazioni%20su%20radiofrequenza%20e%20vacuum">Chiedi il pacchetto</a></div>
+  </article>
+
+  <article class="t">
+    <div class="t-pic pop"><div class="shape burst-sun"></div><img src="assets/l2.webp" alt="Bendaggio drenante alle gambe in cabina" width="800" height="1067" loading="lazy" style="object-position:60% 90%"></div>
+    <div class="t-txt"><h3 class="rise">Pressoterapia</h3><p class="rise" style="--i:1">Gambe e addome. Per quando ti senti gonfia e pesante.</p>
+      <ul class="rows rise" style="--i:2"><li><span>Seduta singola</span><span class="price">25 €</span></li><li><span>Pacchetto 10 sedute</span><span class="price"><span class="was">300 €</span> 250 €</span></li></ul>
+      <a class="more" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20la%20pressoterapia">Prenota la pressoterapia</a></div>
+  </article>
+</div></section>
+
+<section id="offerte" class="offers wrap">
+  <h2 class="rise">Le offerte di adesso</h2>
+  <div class="offer-grid">
+    <div class="offer rise"><h3>Mani e piedi</h3><p>Manicure e pedicure semipermanente nella stessa seduta.</p><div class="flag"><b>40 €<small>invece di 45</small></b></div></div>
+    <div class="offer rise" style="--i:1"><h3>Laser, più zone</h3><p>Una zona 39 €, due zone 70 €, tre zone 99 €.</p><div class="flag"><b>99 €<small>tre zone</small></b></div></div>
+    <div class="offer rise"><h3>Viso</h3><p>Trattamento viso specifico, con maschera e fiala da usare a casa in omaggio.</p><div class="flag"><b>45 €<small>con omaggio</small></b></div></div>
+    <div class="offer rise" style="--i:1"><h3>Pressoterapia</h3><p>Dieci sedute gambe e addome.</p><div class="flag"><b>250 €<small>invece di 300</small></b></div></div>
+  </div>
+</section>
+
+<section id="prodotti" class="shop on-ink"><div class="wrap">
+  <div class="shop-head"><h2 class="rise gold">Da portare a casa</h2><p class="rise" style="--i:1">I solari Pro Tan e Solèa Sotherm che trovi in negozio. Ognuno 20&nbsp;€: scrivimi e te lo metto da parte.</p></div>
+  <div class="rail" tabindex="0" role="group" aria-label="Prodotti in vendita, scorri in orizzontale">
+    <a class="p pop" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20All%20About%20That%20Base%3F"><div class="p-pic"><i></i><img src="assets/pt1.webp" alt="" width="360" height="1197" loading="lazy"></div><b>All About That Base</b><span>Pro Tan, acceleratore</span><span class="price">20 €</span></a>
+    <a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Summer%20Sweet%20Heart%3F"><div class="p-pic"><i></i><img src="assets/pt2.webp" alt="" width="360" height="1135" loading="lazy"></div><b>Summer Sweet Heart</b><span>Pro Tan, acceleratore scuro</span><span class="price">20 €</span></a>
+    <a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Wildly%20Dark%3F"><div class="p-pic"><i></i><img src="assets/pt4.webp" alt="" width="360" height="1054" loading="lazy"></div><b>Wildly Dark Seltzer</b><span>Pro Tan, black bronzer</span><span class="price">20 €</span></a>
+    <a class="p pop" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Hypoallergenic%3F"><div class="p-pic"><i></i><img src="assets/pt5.webp" alt="" width="360" height="1006" loading="lazy"></div><b>Hypoallergenic</b><span>Pro Tan, bronzer naturale</span><span class="price">20 €</span></a>
+    <a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Solea%20Spray%20Invisible%3F"><div class="p-pic"><i></i><img src="assets/so3.webp" alt="" width="360" height="706" loading="lazy"></div><b>Spray Invisible SPF 50</b><span>Solèa Sotherm</span><span class="price">20 €</span></a>
+    <a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Solea%20Silk%20Sun%20Emulsion%3F"><div class="p-pic"><i></i><img src="assets/so2.webp" alt="" width="360" height="720" loading="lazy"></div><b>Silk Sun Emulsion SPF 30</b><span>Solèa Sotherm</span><span class="price">20 €</span></a>
+    <a class="p pop" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Solea%20Sunage%20Face%20Cream%3F"><div class="p-pic"><i></i><img src="assets/so1.webp" alt="" width="360" height="583" loading="lazy"></div><b>Sunage Face Cream SPF 50+</b><span>Solèa Sotherm</span><span class="price">20 €</span></a>
+    <a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Solea%20Intense%20Calming%20Bronze%3F"><div class="p-pic"><i></i><img src="assets/so4.webp" alt="" width="360" height="720" loading="lazy"></div><b>Intense Calming Bronze</b><span>Solèa Sotherm, doposole</span><span class="price">20 €</span></a>
+  </div>
+</div></section>
+
+<section class="rev wrap">
+  <h2 class="rise">Lo dicono loro</h2>
+  <div class="rev-grid">
+    <blockquote class="rise"><p>«Sei sempre gentile, delicata, mai invadente. Ho ricevuto tantissimi complimenti per le unghie.»</p><cite>Una cliente, su WhatsApp</cite></blockquote>
+    <blockquote class="rise" style="--i:1"><p>«Sempre col sorriso, senza nessun pregiudizio e preconcetti. Io la consiglio a tutti.»</p><cite>Una cliente, su Instagram</cite></blockquote>
+    <blockquote class="rise" style="--i:2"><p>«Professionale, gentilissima e sempre disponibile, attenta ad andare incontro alle esigenze dei clienti.»</p><cite>Paola Bonaldo, su Google · 5 su 5</cite></blockquote>
+  </div>
+</section>
+
+<section class="me on-ink">
+  <div class="me-pic"><img src="assets/d3.webp" alt="Denise sorride con un mazzo di fiori davanti all'insegna di Estetica Denise" width="800" height="1067" loading="lazy" style="object-position:50% 40%"></div>
+  <div class="me-txt"><h2 class="rise gold">Ciao, sono Denise</h2><p class="rise" style="--i:1">Il centro è mio e in cabina ci sono io. Ti ascolto, ti dico cosa farei al tuo posto, e poi decidi tu.</p><p class="rise" style="--i:2">Vieni come sei. Qui nessuna ti guarda le mani prima di sistemartele.</p></div>
+  <div class="me-pic"><video src="assets/cabina.mp4" poster="assets/cabina-poster.webp" muted loop playsinline preload="none" autoplay aria-label="Denise accende una candela in cabina"></video></div>
+</section>
+
+<section id="dove" class="close">
+  <div class="star pop"><h2>Vieni, c'è posto</h2><p>Scrivimi cosa vuoi fare e quando puoi. Ti rispondo io.</p><a class="btn" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare">Scrivi a Denise</a></div>
+  <div class="where">
+    <div class="rise"><h3>Dove</h3><p>Via Borgo Treviso 49/B<br>35013 Cittadella (PD)</p><p><a href="https://www.google.com/maps/search/?api=1&query=Estetica+Denise+Via+Borgo+Treviso+49+Cittadella">Apri in Google Maps</a></p></div>
+    <div class="rise" style="--i:1"><h3>Quando</h3><p>Lunedì 14–19:30<br>Martedì–venerdì 9–19<br>Sabato 9–13</p></div>
+    <div class="rise" style="--i:2"><h3>Come</h3><p>WhatsApp <a href="https://wa.me/393296647452">329 664 7452</a><br>Telefono <a href="tel:+390492322348">049 232 2348</a><br>Instagram <a href="https://instagram.com/esteticadenise__">@esteticadenise__</a></p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><img src="assets/logo-full.png" alt="Estetica Denise" width="1420" height="950" loading="lazy"><p>Estetica Denise · Via Borgo Treviso 49/B, 35013 Cittadella (PD)</p></div></footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Estetica Denise","image":"assets/d3.webp","telephone":"+39 049 232 2348","priceRange":"€","address":{"@type":"PostalAddress","streetAddress":"Via Borgo Treviso 49/B","postalCode":"35013","addressLocality":"Cittadella","addressRegion":"PD","addressCountry":"IT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"14:00","closes":"19:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}],"sameAs":["https://instagram.com/esteticadenise__"]}
+</script>
+<script src="brand.js" defer></script>
+</body>
+</html>
