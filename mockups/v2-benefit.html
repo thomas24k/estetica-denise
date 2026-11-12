@@ -7,7 +7,7 @@
 <meta name="description" content="Estetica Denise a Cittadella (PD). Unghie, laminazione ciglia, sopracciglia, epilazione, laser e pressoterapia, con i prezzi in chiaro. Prenota su WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero-poster.webp">
+<link rel="preload" as="image" href="assets/hero-sq-poster.webp">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -56,14 +56,14 @@ header .pill{justify-self:end;min-height:42px;padding:0 20px;font-size:12px}
 
 .hv{display:grid;background:var(--bg)}
 .hv-media{display:flex;justify-content:center;align-items:center;padding:28px 0 0}
-.hv-arch{position:relative;width:min(74%,380px);aspect-ratio:576/832;border-radius:999px 999px 28px 28px;overflow:hidden;background:#2a1d3a}
-.hv-arch video,.hv-arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hv-arch{position:relative;width:min(88%,420px);aspect-ratio:1;overflow:hidden;background:#2a1d3a}
+.hv-arch video,.hv-arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hv-arch video{opacity:0;transition:opacity .8s ease}
 .hv-arch video.is-on{opacity:1}
 .hv-tx{text-align:center;padding:44px var(--f) 64px}
 .hv-tx p{max-width:36ch;margin:20px auto 28px;font-size:17px}
 .hv-tx .open{display:block;margin-top:18px;font-size:14px}
-@media (min-width:900px){.hv{grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 100px);max-height:780px}.hv-media{padding:40px 0}.hv-arch{width:min(62%,430px)}.hv-tx{align-self:center;text-align:left;padding:40px 72px}.hv-tx p{margin-inline:0;font-size:19px}}
+@media (min-width:900px){.hv{grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 100px);max-height:780px}.hv-media{padding:40px 0}.hv-arch{width:min(80%,540px)}.hv-tx{align-self:center;text-align:left;padding:40px 72px}.hv-tx p{margin-inline:0;font-size:19px}}
 @media (prefers-reduced-motion:reduce){.hv-arch video{display:none}}
 
 .seen{text-align:center;padding:44px var(--f);border-bottom:1px solid var(--line)}
@@ -154,8 +154,8 @@ footer p{font-size:14px}
 <main id="top">
 <section class="hv">
  <div class="hv-media"><div class="hv-arch">
-  <img src="assets/hero-poster.webp" alt="Denise accende una candela da massaggio in cabina" width="576" height="832" fetchpriority="high">
-  <video muted loop playsinline autoplay preload="auto" poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <img src="assets/hero-sq-poster.webp" alt="Denise accende una candela da massaggio in cabina" width="576" height="576" fetchpriority="high">
+  <video muted loop playsinline autoplay preload="metadata" poster="assets/hero-sq-poster.webp" aria-hidden="true" tabindex="-1"><source src="assets/hero-full.mp4" type="video/mp4"></video>
  </div></div>
  <div class="hv-tx"><h1>Vuoi mani da guardare?<br>Ci pensa Denise.</h1>
   <p>Unghie, ciglia, sopracciglia, cera, laser. A Cittadella, in Borgo Treviso, con i prezzi scritti in chiaro.</p>
