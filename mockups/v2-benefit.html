@@ -7,7 +7,7 @@
 <meta name="description" content="Estetica Denise a Cittadella (PD). Unghie, laminazione ciglia, sopracciglia, epilazione, laser e pressoterapia, con i prezzi in chiaro. Prenota su WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/n9.webp">
+<link rel="preload" as="image" href="assets/hero-poster.webp">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -54,12 +54,17 @@ header nav a:hover{color:var(--deep)}
 header .pill{justify-self:end;min-height:42px;padding:0 20px;font-size:12px}
 @media (min-width:1000px){header nav{display:flex}header .bur{display:none}header img{height:84px}header .w{min-height:100px}}
 
-.hero .pic{position:relative;height:min(56vh,460px);overflow:hidden}
-.hero .pic img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(74%,380px);height:92%;object-fit:cover;object-position:50% 40%;border-radius:999px 999px 0 0}
-.hero .tx{text-align:center;padding:48px var(--f) 64px}
-.hero p{max-width:36ch;margin:20px auto 28px;font-size:17px}
-.hero .open{display:block;margin-top:18px;font-size:14px}
-@media (min-width:900px){.hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 100px);max-height:780px}.hero .pic{height:auto}.hero .pic img{width:min(62%,460px)}.hero .tx{align-self:center;padding:40px 72px;text-align:left}.hero p{margin-inline:0;font-size:19px}}
+.hv{display:grid;background:var(--bg)}
+.hv-media{display:flex;justify-content:center;align-items:center;padding:28px 0 0}
+.hv-arch{position:relative;width:min(74%,380px);aspect-ratio:576/832;border-radius:999px 999px 28px 28px;overflow:hidden;background:#2a1d3a}
+.hv-arch video,.hv-arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hv-arch video{opacity:0;transition:opacity .8s ease}
+.hv-arch video.is-on{opacity:1}
+.hv-tx{text-align:center;padding:44px var(--f) 64px}
+.hv-tx p{max-width:36ch;margin:20px auto 28px;font-size:17px}
+.hv-tx .open{display:block;margin-top:18px;font-size:14px}
+@media (min-width:900px){.hv{grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 100px);max-height:780px}.hv-media{padding:40px 0}.hv-arch{width:min(62%,430px)}.hv-tx{align-self:center;text-align:left;padding:40px 72px}.hv-tx p{margin-inline:0;font-size:19px}}
+@media (prefers-reduced-motion:reduce){.hv-arch video{display:none}}
 
 .seen{text-align:center;padding:44px var(--f);border-bottom:1px solid var(--line)}
 .seen h2{font-size:30px}.seen p{margin-top:6px}
@@ -104,7 +109,7 @@ header .pill{justify-self:end;min-height:42px;padding:0 20px;font-size:12px}
 .p:nth-child(4n+2) .sh i{clip-path:var(--ba);background:var(--sun)}
 .p:nth-child(4n+3) .sh i{clip-path:none;border-radius:46% 54% 58% 42%/50% 44% 56% 50%;background:var(--ink)}
 .p:nth-child(4n) .sh i{clip-path:var(--bc);background:var(--bg)}
-.p .sh img{position:absolute;left:50%;top:50%;height:100%;width:auto;max-width:64%;object-fit:contain;transform:translate(-50%,-50%);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.p .sh img{position:absolute;left:50%;top:50%;height:96%;width:auto;max-width:86%;object-fit:contain;transform:translate(-50%,-50%);filter:drop-shadow(0 10px 14px rgba(0,0,0,.12));transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
 .p:hover .sh img{transform:translate(-50%,-54%) rotate(4deg) scale(1.05)}
 .p:hover .sh i{transform:rotate(45deg)}
 .p b{display:block;font:500 16px/1.3 "Figtree",sans-serif}
@@ -147,9 +152,12 @@ footer p{font-size:14px}
  <a class="pill" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare">Prenota</a>
 </div></header>
 <main id="top">
-<section class="hero">
- <div class="pic stripes"><img src="assets/n9.webp" alt="Mano con semipermanente rosso lucido, lavoro di Denise" width="800" height="1067" fetchpriority="high"></div>
- <div class="tx"><h1>Vuoi mani da guardare?<br>Ci pensa Denise.</h1>
+<section class="hv">
+ <div class="hv-media"><div class="hv-arch">
+  <img src="assets/hero-poster.webp" alt="Denise accende una candela da massaggio in cabina" width="576" height="832" fetchpriority="high">
+  <video muted loop playsinline autoplay preload="auto" poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1"><source src="assets/hero.mp4" type="video/mp4"></video>
+ </div></div>
+ <div class="hv-tx"><h1>Vuoi mani da guardare?<br>Ci pensa Denise.</h1>
   <p>Unghie, ciglia, sopracciglia, cera, laser. A Cittadella, in Borgo Treviso, con i prezzi scritti in chiaro.</p>
   <a class="pill" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare">Prenota ora</a><span class="open" data-open>Lun 14–19:30 · Mar–Ven 9–19 · Sab 9–13</span></div>
 </section>
@@ -191,7 +199,7 @@ footer p{font-size:14px}
 <section class="gal" id="unghie-denise"><div class="w"><span class="lab">Il lavoro di Denise</span><h2 class="rise">Le nostre unghie</h2><p class="sub rise" style="--i:1">Quattordici set fatti in cabina. Porta la foto di quello che vuoi: lo rifacciamo.</p>
 </div><div class="ng"><figure class="pop" style="--i:0"><img src="assets/n9.webp" alt="Semipermanente rosso lucido" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:1"><img src="assets/n2.webp" alt="Nail art con ciliegie su base bianca e fucsia" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:2"><img src="assets/n10.webp" alt="Semipermanente lilla" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:3"><img src="assets/n3.webp" alt="French rosso con cuori" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:4"><img src="assets/n6.webp" alt="Rosa con fiocchi neri" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:0"><img src="assets/n12.webp" alt="Semipermanente bordeaux" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:1"><img src="assets/n1.webp" alt="French con pois bianchi e neri" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:2"><img src="assets/n4.webp" alt="Rosa perlato" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:3"><img src="assets/n13.webp" alt="Semipermanente azzurro" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:4"><img src="assets/n11.webp" alt="Glitter rosso e argento con una stella" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:0"><img src="assets/n7.webp" alt="Nero con sfumatura bordeaux" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:1"><img src="assets/n5.webp" alt="Nude con glitter" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:2"><img src="assets/n14.webp" alt="Rosso con unghia a pois" width="800" height="1067" loading="lazy"></figure><figure class="pop" style="--i:3"><img src="assets/n8.webp" alt="Nude rosato con accenti glitter" width="800" height="1067" loading="lazy"></figure><div class="cta pop"><h3>Il prossimo è il tuo</h3><p>Scrivi a Denise e scegliete insieme forma e colore.</p><a class="pill" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20vorrei%20prenotare%20un%20set%20di%20unghie">Prenota le unghie</a></div></div></section>
 
-<section class="best" id="prodotti"><div class="w"><span class="lab">In negozio, 20 € l'uno</span><h2 class="rise">Da portare a casa</h2><div class="pg"><a class="p pop" style="--i:0" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20All%20About%20That%20Base%3F"><div class="sh"><i></i><img src="assets/pt1.webp" alt="" width="360" height="900" loading="lazy"></div><b>All About That Base</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Summer%20Sweet%20Heart%3F"><div class="sh"><i></i><img src="assets/pt2.webp" alt="" width="360" height="900" loading="lazy"></div><b>Summer Sweet Heart</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Wildly%20Dark%20Seltzer%3F"><div class="sh"><i></i><img src="assets/pt4.webp" alt="" width="360" height="900" loading="lazy"></div><b>Wildly Dark Seltzer</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:3" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Hypoallergenic%20Bronzer%3F"><div class="sh"><i></i><img src="assets/pt5.webp" alt="" width="360" height="900" loading="lazy"></div><b>Hypoallergenic Bronzer</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:0" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Spray%20Invisible%20SPF%2050%3F"><div class="sh"><i></i><img src="assets/so3.webp" alt="" width="360" height="900" loading="lazy"></div><b>Spray Invisible SPF 50</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Silk%20Sun%20Emulsion%20SPF%2030%3F"><div class="sh"><i></i><img src="assets/so2.webp" alt="" width="360" height="900" loading="lazy"></div><b>Silk Sun Emulsion SPF 30</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Sunage%20Face%20Cream%20SPF%2050%2B%3F"><div class="sh"><i></i><img src="assets/so1.webp" alt="" width="360" height="900" loading="lazy"></div><b>Sunage Face Cream SPF 50+</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:3" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Intense%20Calming%20Bronze%3F"><div class="sh"><i></i><img src="assets/so4.webp" alt="" width="360" height="900" loading="lazy"></div><b>Intense Calming Bronze</b><span>Solèa Sotherm · 20 €</span></a></div></div></section>
+<section class="best" id="prodotti"><div class="w"><span class="lab">In negozio, 20 € l'uno</span><h2 class="rise">Da portare a casa</h2><div class="pg"><a class="p pop" style="--i:0" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20All%20About%20That%20Base%3F"><div class="sh"><i></i><img src="assets/cut-pt1.webp" alt="Pro Tan All About That Base" loading="lazy"></div><b>All About That Base</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Summer%20Sweet%20Heart%3F"><div class="sh"><i></i><img src="assets/cut-pt2.webp" alt="Pro Tan Summer Sweet Heart" loading="lazy"></div><b>Summer Sweet Heart</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Wildly%20Dark%20Seltzer%3F"><div class="sh"><i></i><img src="assets/cut-pt4.webp" alt="Pro Tan Wildly Dark Seltzer" loading="lazy"></div><b>Wildly Dark Seltzer</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:3" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Pro%20Tan%20Hypoallergenic%20Bronzer%3F"><div class="sh"><i></i><img src="assets/cut-pt5.webp" alt="Pro Tan Hypoallergenic Bronzer" loading="lazy"></div><b>Hypoallergenic Bronzer</b><span>Pro Tan · 20 €</span></a><a class="p pop" style="--i:0" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Spray%20Invisible%20SPF%2050%3F"><div class="sh"><i></i><img src="assets/cut-so3.webp" alt="Solèa Sotherm Spray Invisible SPF 50" loading="lazy"></div><b>Spray Invisible SPF 50</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:1" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Silk%20Sun%20Emulsion%20SPF%2030%3F"><div class="sh"><i></i><img src="assets/cut-so2.webp" alt="Solèa Sotherm Silk Sun Emulsion SPF 30" loading="lazy"></div><b>Silk Sun Emulsion SPF 30</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:2" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Sunage%20Face%20Cream%20SPF%2050%2B%3F"><div class="sh"><i></i><img src="assets/cut-so1.webp" alt="Solèa Sotherm Sunage Face Cream SPF 50+" loading="lazy"></div><b>Sunage Face Cream SPF 50+</b><span>Solèa Sotherm · 20 €</span></a><a class="p pop" style="--i:3" href="https://wa.me/393296647452?text=Ciao%20Denise%2C%20mi%20metti%20da%20parte%20Sol%C3%A8a%20Sotherm%20Intense%20Calming%20Bronze%3F"><div class="sh"><i></i><img src="assets/cut-so4.webp" alt="Solèa Sotherm Intense Calming Bronze" loading="lazy"></div><b>Intense Calming Bronze</b><span>Solèa Sotherm · 20 €</span></a></div></div></section>
 
 <section class="rv"><span class="lab">5,0 su Google</span><h2 class="rise" style="margin-top:10px">Lo dicono loro</h2><div class="rail" tabindex="0" role="group" aria-label="Recensioni, scorri in orizzontale"><blockquote class="q"><p>«Denise è una persona fantastica; è professionale, gentilissima e sempre disponibile.»</p><cite>Paola Bonaldo · Google</cite></blockquote><blockquote class="q"><p>«Sei sempre gentile, delicata, mai invadente. Le unghie sono bellissime e ho ricevuto tantissimi complimenti.»</p><cite>Una cliente · WhatsApp</cite></blockquote><blockquote class="q"><p>«Denise è una vera garanzia! Ogni volta che vado da lei so di essere in ottime mani.»</p><cite>Arianna Apuzzo · Google</cite></blockquote><blockquote class="q"><p>«Mi sono sentita proprio coccolata e ne avevo bisogno. La pelle è ancora luminosissima.»</p><cite>Una cliente · WhatsApp</cite></blockquote><blockquote class="q"><p>«Competente, pronta alla battuta, sempre col sorriso, senza nessun pregiudizio.»</p><cite>Una cliente · Instagram</cite></blockquote></div></section>
 
@@ -218,5 +226,13 @@ footer p{font-size:14px}
  document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.g,b.dataset.t);b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})})});
  show('b','unghie');show('a','laser');
 })();
+</script>
+<script>
+(function(){var v=document.querySelector('.hv-arch video');if(!v||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+v.loop=false;
+v.addEventListener('playing',function(){v.classList.add('is-on')},{once:true});
+v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>v.duration-.6&&!v._f){v._f=1;v.classList.remove('is-on')}});
+v.addEventListener('ended',function(){v._f=0;v.currentTime=0;v.play().catch(function(){});v.classList.add('is-on')});
+v.play&&v.play().catch(function(){});})();
 </script>
 </body></html>
